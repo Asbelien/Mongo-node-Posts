@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+    --candy-pink: #FF5FA2;
+    --candy-mint: #3DDC97;
+    --candy-lemon: #FFD93D;
+    --candy-grape: #A66BFF;
+    --candy-bg-start: #FFE8F5;
+    --candy-bg-end: #E3FFF6;
+    --candy-text: #3A2A4D;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--candy-text);
+    background: linear-gradient(160deg, var(--candy-bg-start) 0%, var(--candy-bg-end) 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', sans-serif;
+}
+
+.candy-decor {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.candy-decor span {
+    position: absolute;
+    opacity: 0.16;
+}
+
+.candy-decor span:nth-child(1) { top: 6%; left: 4%; font-size: 70px; transform: rotate(-12deg); }
+.candy-decor span:nth-child(2) { top: 12%; right: 6%; font-size: 100px; transform: rotate(15deg); }
+.candy-decor span:nth-child(3) { bottom: 8%; left: 8%; font-size: 120px; }
+.candy-decor span:nth-child(4) { bottom: 18%; right: 10%; font-size: 85px; transform: rotate(-8deg); }
+.candy-decor span:nth-child(5) { top: 45%; left: 46%; font-size: 60px; opacity: 0.1; }
+.candy-decor span:nth-child(6) { top: 65%; right: 28%; font-size: 90px; }
+.candy-decor span:nth-child(7) { top: 30%; left: 20%; font-size: 55px; opacity: 0.1; }
+
+.container, nav, main {
+    position: relative;
+    z-index: 1;
+}
+
+nav {
+    background: transparent !important;
+    box-shadow: none;
+    padding: 24px 0 0;
+}
+
+nav .nav-wrapper {
+    background: linear-gradient(90deg, var(--candy-pink), var(--candy-grape)) !important;
+    width: fit-content;
+    padding: 0 40px;
+    margin: 0 auto;
+    border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(255, 95, 162, 0.35);
+}
+
+nav .brand-logo {
+    position: static !important;
+    transform: none !important;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.container h4 {
+    color: var(--candy-text);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.btn, .btn-large {
+    font-family: 'Fredoka', sans-serif;
+    border-radius: 999px !important;
+    text-transform: none;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    box-shadow: 0 6px 16px rgba(166, 107, 255, 0.35);
+}
+
+.btn.blue.darken-2, .btn-large.blue.darken-2 {
+    background: linear-gradient(90deg, var(--candy-pink), var(--candy-grape)) !important;
+}
+
+.btn.green, .btn-large.green {
+    background-color: var(--candy-grape) !important;
+    box-shadow: 0 6px 16px rgba(166, 107, 255, 0.4);
+}
+
+.btn.teal {
+    background-color: var(--candy-pink) !important;
+    box-shadow: 0 6px 16px rgba(255, 95, 162, 0.4);
+}
+
+.card {
+    border-radius: 24px !important;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(166, 107, 255, 0.18) !important;
+    border: 3px solid #FFFFFF;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card .card-title {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--candy-pink);
+    font-weight: 600;
+}
+
+.card-action {
+    background: #FFF9FD;
+    border-top: 2px dashed #FFD3E8 !important;
+}
+
+.chip {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: white !important;
+    border-radius: 999px;
+}
+
+.chip:nth-child(5n+1) { background-color: var(--candy-pink) !important; }
+.chip:nth-child(5n+2) { background-color: var(--candy-mint) !important; }
+.chip:nth-child(5n+3) { background-color: var(--candy-lemon) !important; color: var(--candy-text) !important; }
+.chip:nth-child(5n+4) { background-color: var(--candy-grape) !important; }
+.chip:nth-child(5n+5) { background-color: #FF8FB5 !important; }
+
+.candy-form-card {
+    background: white;
+    border: 3px solid var(--candy-pink);
+    border-radius: 24px;
+    padding: 30px 35px;
+    box-shadow: 0 16px 40px rgba(255, 95, 162, 0.2);
+}
+
+.input-field input, .input-field textarea, .input-field select {
+    border-bottom: 2px solid #FFD3E8 !important;
+    box-shadow: none !important;
+}
+
+.input-field input:focus, .input-field textarea:focus {
+    border-bottom: 2px solid var(--candy-pink) !important;
+    box-shadow: 0 1px 0 0 var(--candy-pink) !important;
+}
+
+.input-field label {
+    font-family: 'Nunito', sans-serif;
+    color: var(--candy-grape) !important;
+}
+
+.input-field label.active {
+    color: var(--candy-pink) !important;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+    color: var(--candy-pink);
+}
+
+.select-wrapper input.select-dropdown {
+    border-bottom: 2px solid #FFD3E8 !important;
+    font-family: 'Nunito', sans-serif;
+}
+
+.card-image img {
+    border-bottom: 3px solid #FFF9FD;
+}
